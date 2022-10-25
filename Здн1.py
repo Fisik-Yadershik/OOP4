@@ -15,22 +15,20 @@ class Summ():
         self.b = inp2
 
     def summ(self):
-        print("Сумма чисел: ", int(self.a) + int(self.b))
+        if (self.a.isnumeric()==True) and (self.b.isnumeric==True):
+            print("Сумма чисел: ", int(self.a) + int(self.b))
+        else:
+            print("Результат конкатенации: ", self.a + self.b)
 
     def cont(self):
         print("Результат конкатенации: ", self.a + self.b)
 
 
 def main():
-    try:
-        inp1 = input("Введите первое число: ")
-        inp2 = input("Введите второе число: ")
-        summ = Summ(inp1, inp2)
-        summ.summ()
-    except ValueError as v:
-        summ = Summ(inp1, inp2)
-        summ.cont()
-
+    inp1 = input("Введите первое число: ")
+    inp2 = input("Введите второе число: ")
+    summ = Summ(inp1, inp2)
+    summ.summ()
 
 if __name__ == "__main__":
     main()
